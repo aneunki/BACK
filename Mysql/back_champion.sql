@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `back` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `back`;
 -- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
 --
 -- Host: localhost    Database: back
@@ -25,7 +27,7 @@ DROP TABLE IF EXISTS `champion`;
 CREATE TABLE `champion` (
   `ChampionID` int NOT NULL,
   `ChampionName` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ChampionNameEng` varchar(45) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `ChampionNameEng` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `ChampionImageEng` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `winGame` int(10) unsigned zerofill NOT NULL DEFAULT '0000000000',
   `banGame` int(10) unsigned zerofill NOT NULL DEFAULT '0000000000',
@@ -58,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-17 15:56:21
+-- Dump completed on 2023-06-17 16:20:39

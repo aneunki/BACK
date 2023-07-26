@@ -7,7 +7,7 @@ from PIL import Image, ImageTk
 import pymysql
 
 # STEP 2: MySQL Connection 연결
-con = pymysql.connect(host='172.30.1.18', user='back', password='0000',
+con = pymysql.connect(host='172.30.1.72', user='back', password='0000',
                        db='back', charset='utf8') # 한글처리 (charset = 'utf8')
  
 # STEP 3: Connection 으로부터 Cursor 생성
@@ -24,7 +24,7 @@ champion_data = sorted(champion_data, key=lambda x:x[1])
 con.close()
 
 
-con = pymysql.connect(host='172.30.1.18', user='back', password='0000',
+con = pymysql.connect(host='172.30.1.72', user='back', password='0000',
                        db='back', charset='utf8') # 한글처리 (charset = 'utf8')
  
 # STEP 3: Connection 으로부터 Cursor 생성
@@ -251,7 +251,7 @@ class BackBanpickAnalyzer(tkinter.Tk):
                 print()
 
             def insert_db(self):                
-                conn = pymysql.connect(host='172.30.1.18', user='back', password='0000',
+                conn = pymysql.connect(host='172.30.1.72', user='back', password='0000',
                        db='back', charset='utf8')
 
                 sql_pick_and_KDA = """INSERT INTO match_result (blueTeamName, blueTopChampion, blueTopKill, blueTopDeath, blueTopAssist,
@@ -817,7 +817,7 @@ class BackBanpickAnalyzer(tkinter.Tk):
         #SQL 접근
         
         # STEP 2: MySQL Connection 연결
-        con_champ = pymysql.connect(host='172.30.1.18', user='back', password='0000',
+        con_champ = pymysql.connect(host='172.30.1.72', user='back', password='0000',
                        db='back', charset='utf8') # 한글처리 (charset = 'utf8')
  
         # STEP 3: Connection 으로부터 Cursor 생성
@@ -891,7 +891,7 @@ class BackBanpickAnalyzer(tkinter.Tk):
 
     def show_window_player(self):
         # STEP 2: MySQL Connection 연결
-        con_player = pymysql.connect(host='172.30.1.18', user='back', password='0000',
+        con_player = pymysql.connect(host='172.30.1.72', user='back', password='0000',
                        db='back', charset='utf8') # 한글처리 (charset = 'utf8')
  
         # STEP 3: Connection 으로부터 Cursor 생성
